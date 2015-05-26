@@ -2,7 +2,7 @@ require 'rubygems'
 require 'bundler/setup'
 require 'sinatra'
 require 'better_errors'
-
+require "sinatra/reloader" if development?
 # Just in development!
 configure :development do
   use BetterErrors::Middleware

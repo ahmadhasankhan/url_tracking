@@ -3,8 +3,12 @@ source "http://rubygems.org/"
 
 # declare the sinatra dependency
 gem 'sinatra'
-gem 'thin'
+# Extension to reload modified files
+gem 'sinatra-contrib'
+# Database adopter
 gem 'mysql2'
+# Application Server
+gem 'thin'
 
 # setup our test group and require rspec
 group :test do
@@ -18,7 +22,6 @@ end
 gem 'activerecord', '~> 4.0'
 group :development do
   gem 'better_errors'
-  gem 'thin'
   # uncomment this for more advanced features:
   # gem 'binding_of_caller'
 end
